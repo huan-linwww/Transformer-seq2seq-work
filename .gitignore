@@ -1,0 +1,2 @@
+# 忽略特定目录下的 parquet 文件
+data/*.parquet
