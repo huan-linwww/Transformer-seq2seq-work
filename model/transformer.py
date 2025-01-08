@@ -14,7 +14,9 @@ class Transformer(nn.Module()):
         self.device = device
     def forward(self, input, tgt):
         #src_mask
-        src_mask = (input != self.src_pad_idx).unsqueeze(1).unsqueeze(2)#输出是一个布尔张量，形状为 [batch_size, src_len],之后维度扩展为 [batch_size, 1, 1, src_len]，多头注意力需要广播掩码到 [batch_size, n_head, seq_len, seq_len] 的维度
+        # src_mask = (input != self.src_pad_idx).unsqueeze(1).unsqueeze(2)#输出是一个布尔张量，形状为 [batch_size, src_len],之后维度扩展为 [batch_size, 1, 1, src_len]，多头注意力需要广播掩码到 [batch_size, n_head, seq_len, seq_len] 的维度
+        
+        src_mask = input["attention_mask"]
         
         #trg_mask
         trg_mask_pad_musk = (tgt != self.trg_pad_idx).unsqueeze(1).unsqueeze(2)

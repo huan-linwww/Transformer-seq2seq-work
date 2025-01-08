@@ -18,6 +18,6 @@ class Decoder(nn.Module):
         for decoder in self.Decoder:
             out = decoder(out, src_mask, mask, input_enc)
             
-        out = self.linear(out)
+        out = self.linear(out)# [batch, seq_len, dec_vocab_size]
 
         return out
