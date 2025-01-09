@@ -1,6 +1,6 @@
 import torch
 
-class Posencoder(torch.nn.Module()):
+class Posencoder(torch.nn.Module):
     def __init__(self, dim, max_len,device):
         """
         dim: int

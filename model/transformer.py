@@ -3,7 +3,7 @@ from model import decoder
 from torch import nn
 import torch
 
-class Transformer(nn.Module()):
+class Transformer(nn.Module):
     def __init__(self, vocab_size, dec_vocab_size, embed_size, max_len, hidden_size, feedforward_size, head_num, dropout, device, layer_num=6, src_pad_idx=0, trg_pad_idx=0, trg_sos_idx=1):
         super(Transformer, self).__init__()
         self.encoder = encoder.Encoder(vocab_size, embed_size, max_len, hidden_size, feedforward_size, head_num, dropout, device, layer_num)

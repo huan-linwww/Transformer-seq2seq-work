@@ -2,7 +2,7 @@ from torch import nn
 from model.layer.layer_norm import LayerNorm
 from model.layer.FFN import FFN
 from model.layer.multi_head_attention import MultiHeadAttention
-class Encoder_b(nn.Module()):
+class Encoder_b(nn.Module):
     def __init__(self, hidden_size, feedforward_size, head_num, dropout=0.1):
         super(Encoder_b, self).__init__()
         self.multiheadatt = MultiHeadAttention(hidden_size, head_num)
