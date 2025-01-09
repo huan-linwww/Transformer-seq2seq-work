@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-class LayerNorm(nn.Module()):
+class LayerNorm(nn.Module):
     def __init__(self, hidden_size, eps=1e-6):
         super(LayerNorm, self).__init__()
         #定义两个可学习参数

@@ -19,7 +19,7 @@ def process_data(examples):
     
 
 #  对数据集进行批量分词
-encoded_dataset = dataset.map(process_data, batched=True)
+encoded_dataset = dataset.map(process_data, batched=True, batch_size=256)  # 减小批处理大小
 train_dataset = encoded_dataset["train"]
 test_dataset = encoded_dataset["test"]
 val_dataset = encoded_dataset["validation"]

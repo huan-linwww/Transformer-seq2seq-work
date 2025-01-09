@@ -3,7 +3,7 @@ from torch import nn
 import math
 
 
-class MultiHeadAttention(nn.Module()):
+class MultiHeadAttention(nn.Module):
     def __init__(self, hidden_size, head_num):
         super(MultiHeadAttention, self).__init__()
         self.hidden_size = hidden_size

@@ -1,6 +1,6 @@
 from torch import nn
 
-class FFN(nn.Module()):
+class FFN(nn.Module):
     def __init__(self, hidden_size, feedforward_size,droupout=0.1):
         """
         hidden_size: int
